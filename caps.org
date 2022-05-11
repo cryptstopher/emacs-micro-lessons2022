@@ -1,0 +1,26 @@
+#+TITLE: Why so case sensitive?
+
+Here are some easy to ways to capitalize and lowercase words in Emacs.  Why would you do this?
+
+You never know what you might be doing in Emacs on any given day, you might find yourself in a situation in which some quick case changes are required.
+
+* Downcase Words
+
+Use ~M-l~ to downcase these words:
+
+homer
+homer
+homer
+
+* Upcase Words
+
+Use ~M-u~ to upcase this word:
+
+HOMER
+
+* Capitalize Word (Most Common)
+
+Capitalize this proper name with ~M-c~:
+
+Homer
+
