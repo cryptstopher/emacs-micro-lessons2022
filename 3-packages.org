@@ -1,0 +1,39 @@
+#+TITLE: Micro Lesson #3 - Installing Packages
+
+* Two Package Managers
+
+Default: ~elpa~
+Other: ~melpa~
+
+(There may be more, I don't know.)
+
+* From The Config File
+
+This is not my recipe, but I use it to augment the default package
+manager with the Melpa package manager.
+
+#+begin_src elisp
+  (require 'package)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  (package-initialize)
+  (unless package-archive-contents
+  (package-refresh-contents))
+  (unless (package-installed-p 'use-package)
+    (package-install 'use-package))
+  (require 'use-package)
+  (setq use-package-always-ensure t)
+#+end_src
+
+* How To Install Packages
+
+It's good to first refresh packages:
+
+~M-x package-refresh-contents~
+
+Even though the code above should have done this, it does not always
+take.
+
+Then you can to the package install function:
+
+~M-x package-install~
+
